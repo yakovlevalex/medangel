@@ -1,0 +1,228 @@
+$blue_primary: #008dd2;
+$blue_light: #0e9cdc;
+$blue_dark: #006cb5;
+$orange: #eb7d4d;
+$primary: #333;
+
+$font_size_standart: 1em;
+$font_size_title: 2em;
+$font_size_subtitle: 1.5em;
+
+$pms: 8px;
+
+
+.main {
+	padding-top: $pms*8;
+	padding-bottom: $pms*8;
+	font-family: 'pf_beausans_proregular';
+
+	.std_p {
+		padding-top: $pms*5;
+		padding-bottom: $pms*5;
+	}
+
+	.page {
+		padding-bottom: $pms*8;
+		display: inline-block;
+		font-size: 16px;
+
+		.title_dark {
+			padding-top: 6*$pms;
+			padding-bottom: 6*$pms;
+			color: $primary;
+			font-size: 2.5em;
+			letter-spacing: 1.5px;
+		}
+
+		.title_blue {
+			padding-top: 4*$pms;
+			padding-bottom: 4*$pms;
+			color: $blue_primary;
+			font-size: $font_size_title;
+			font-weight: 700;
+		}
+
+		.title_white {
+			padding-top: 4*$pms;
+			padding-bottom: 4*$pms;
+			color: $orange;
+			
+		}
+
+		.subtitle_blue {
+			padding-top: 2*$pms;
+			padding-bottom: 2*$pms;
+			color: $blue_dark;
+			font-size: $font_size_standart;
+			font-weight: 900;
+			letter-spacing: 1px;
+		}
+
+		.plus_line {
+			color: $primary;
+			font-style: italic;
+			padding-left: $pms*2;
+			position: relative;
+			margin-bottom: $pms;
+
+			&:before {
+				content: "+";
+				font-weight: 900;
+				color: $blue_dark;
+				position: absolute;
+				left: 0;
+				top: 0;
+				font-style: normal;
+			}
+
+			&:nth-child(1) {
+				font-style: normal;
+				padding-bottom: $pms;
+
+				&:before {
+					content: "✓";
+					color: $orange;
+					font-weight: 600;
+				}
+			}
+		}
+
+		.advantages {
+			padding-top: $pms*2;
+			padding-bottom: $pms*2;
+			padding-left: $pms*4;
+
+			.head {
+				color: $blue_dark;
+				font-weight: 700;
+				font-size: $font_size_subtitle;
+			}
+
+			.bot {
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				font-size: 0.8em;
+				margin-top: $pms;
+			}
+		}
+
+		.plus_row {
+			padding-bottom: $pms*5;
+
+			.item {
+				font-size: 0.9em;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+			}
+		}
+
+		.plus_img_vert {
+
+			padding-bottom: $pms*2;
+			position: relative;
+
+			.head {
+				font-size: 1.1em;
+				padding-bottom: $pms;
+				text-align: center;
+				text-transform: uppercase;
+				font-family: 'pf_beausans_proregular';
+			}
+
+			.body {
+				
+				position: relative;
+				bottom: 0;
+
+				div {
+
+					font-family: 'pf_beausans_prolight_italic';
+					position: relative;
+					padding-left: $pms*3;
+					margin-bottom: $pms*2;
+					font-weight: 100;
+
+					&:before {
+						content: "+";
+						font-weight: 900;
+						color: $blue_dark;
+						position: absolute;
+						left: 0;
+						top: 0;
+						font-style: normal;
+					}
+				}
+			}
+		}
+
+		.marked {
+			padding-left: $pms*5;
+			position: relative;
+			margin-top: $pms;
+			margin-bottom: $pms;
+
+			&:before {
+				position: absolute;
+				left: 0;
+				padding: $pms/2 $pms;
+				display: block;
+				content: "✓";
+				color: red;
+				border: 1px solid $blue_dark;
+				border-radius: $pms*2;
+			}
+		}
+
+		.borleft {
+			border-right: 2px dotted #ccc;
+		}
+
+		.sys {
+			display: inline-block;
+			position: relative;
+		}
+
+		.warn {
+			height: 100%;
+			position: absolute;
+			right: 0;
+
+			@media (max-width: 767px) {
+				position: relative;
+				margin-top: $pms*3;
+				padding: 0
+			}
+
+			.wrp {
+				top: 50%;
+				position: relative;
+				transform: translateY(-50%);
+				padding-left: $pms*8;
+
+				@media (max-width: 767px) {
+					top: auto;
+					transform: none;
+				}
+
+				&:before {
+					position: absolute;
+					left: 0;
+					top: 50%;
+					// padding: $pms/2 $pms;
+					text-align: center;
+					transform: translateY(-50%);
+					width: $pms*4;
+					height: $pms*4;
+					vertical-align: baseline;
+					display: block;
+					content: "!";
+					font-size: 1.4em;
+					font-weight: 700;
+					color: red;
+					border: 1px solid $blue_dark;
+					border-radius: $pms*2;
+				}
+			}
+		}
+	}
+}
